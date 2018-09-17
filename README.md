@@ -5,12 +5,15 @@ velocity (m/s), capacity (J), endurance (s), precision(1/mm), workspace(m), extr
 and 2 constraints:
 cost ($), mass (g)
 
-README
+
 Following are the Instructions to run MCDPL Library for Ground Based Robots: 
+
 1.	Clean-install version:
 1.1.	To perform a clean install on your system, please refer to the MCDPL Documentation (https://andreacensi.github.io/mcdp-manual/mcdp-manual.pdf) and follow their step-by-step instructions regarding the installation.
 1.2.	Clone the project from the github page: (https://github.com/asrathor/AutomaticDesign).
 1.3.	To run the MCDPL solver, execute the command mentioned in 2.4 of this document.  
+
+
 2.	Pre-installed version:
 2.1.	Download the VM from this link: https://drive.google.com/file/d/1cPCjZn4_7Cu2mEREIZ51Cf3aWomZ7_n0/view?usp=sharing 
 This VM already has MCDPL pre-installed. 
@@ -22,9 +25,11 @@ The indicated numbers in the command represent: endurance (in seconds), extra_pa
 The option --imp provides the implementation details.
 
 Note that these values depend on the specification of the parts mentioned in our mcdp files (i.e., Joint.mcdp, actuation3.mcdp and chassis1.mcdp). The specifications in these mcdp files can be changed to acquire more accurate upper bound.
+
 2.5.	To create a map of the design, execute the following command:
 "$ mcdp-plot --cache –plots ndp_graph_enclosed –D ../.. –d. RoboticArm" 
 2.6.	For adding the more parts in the library, simply edit the catalogues present in mcdp files: Joint.mcdp, actuation3.mcdp and chassis1.mcdp.
+
 3.	Known-errors while installation:
 3.1.	The repository ‘http://security.ubuntu.com/ubuntu zesty-security Release’ does no longer have a Release file.
 Solution: Update the /etc/apt/sources.list file by removing the existing declarations and add the following:
